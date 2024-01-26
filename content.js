@@ -11,5 +11,6 @@ function start () {
 
 
     const animationFunc = new Animation(animationContainer);
+    console.log(document.getElementById('animation').attributes)
 
 }
