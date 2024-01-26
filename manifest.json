@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "Restore?",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Take a break and meditate",
+      "default_popup": "index.html"
+    }
+  }
