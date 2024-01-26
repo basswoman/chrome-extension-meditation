@@ -1,49 +1,52 @@
-body, #title {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+* {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 body {
-    height: 420px;
-    width: 600px;
-    background-color: rgb(13, 13, 87);
-  
+  height: 580px;
+  width: 580px;
+  background-color: rgb(13, 13, 87);
+  position: relative;
 }
- 
+
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #animationContainer {
-    background-color: rgb(13, 13, 87);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      /* box-sizing: border-box; */
+  background-color: rgb(13, 13, 87);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
-#title{
-    color: beige;
-    font-size: 50px;
-    text-align: center;
+#title {
+  color: beige;
+  font-size: 30px;
+  text-align: center;
 }
 
 #animation {
-    height: 10%;
-    width: 10%;
-    background-color: rgb(255, 119, 0);
+  height: 10%;
+  width: 10%;
+  background-color: rgb(255, 119, 0);
 }
 button {
-    border: 3px solid #222;
-    width: 100%;
-    font-size: 20px;
-    border-radius: 10px;
+  border: 3px solid #222;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
 }
