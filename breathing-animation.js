@@ -9,6 +9,7 @@ class Animation {
     this.exhaleSpeed = 80;
     this.boundGrow = this.grow.bind(this);
     this.boundShrink = this.shrink.bind(this);
+    this.boundAdjust = this.adjust.bind(this);
     setTimeout(this.boundGrow, this.inhaleSpeed);
 
     this.breathCycleDiv = document.createElement('div');
@@ -19,6 +20,7 @@ class Animation {
     document.getElementById('bCDiv').appendChild(this.breathCycle);
     this.breathButton = document.createElement('button');
     this.breathButton.id = 'breathButton';
+    this.breathButton.innerText = 'Adjust breathing time'
     document.getElementById('bCDiv').appendChild(this.breathButton);
   }
 
@@ -60,7 +62,6 @@ class Animation {
       this.exhaleSpeed / 10
     } counts`;
 
-    console.log('asdfasdfasdfnjknekgehid;');
     function decrease() {
       const animation = document.getElementById('animation');
       const currentHeight = Number(
@@ -82,7 +83,6 @@ class Animation {
     if (iteration < 99) {
       setTimeout(this.boundShrink, this.exhaleSpeed, iteration + 1);
     } else {
-      console.log('got here!');
       setTimeout(this.boundGrow, this.inhaleSpeed + 200);
     }
   }

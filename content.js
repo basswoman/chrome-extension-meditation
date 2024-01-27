@@ -13,5 +13,5 @@ function start() {
   console.log(document.getElementById('animation').attributes);
 
   const breathButton = document.getElementById('breathButton');
-  breathButton.addEventListener('click', animationFunc.adjust);
+  breathButton.addEventListener('click', animationFunc.boundAdjust);
 }
