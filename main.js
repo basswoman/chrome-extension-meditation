@@ -3,9 +3,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const medButton = document.getElementById('load-meditation-page');
   medButton.addEventListener('click', () => {
-    start();
-    setTimeout(() => {
-      medButton.innerText = 'Press to finish';
-    }, 2000);
+    if ((medButton.innerHTML = 'Press to start meditation')) {
+      start();
+      setTimeout(() => {
+        medButton.innerText = 'Press to finish meditation';
+      }, 2000);
+    } else {
+      medButton.innerText = 'Press to start meditation';
+    }
   });
 });

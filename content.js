@@ -14,4 +14,5 @@ function start() {
 
   const audio = new Audio('audio.wav');
   audio.play();
+  audio.volume = 0.7;
 }
