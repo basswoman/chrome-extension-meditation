@@ -15,18 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.play();
         audio.volume = 0.1;
         medButton.id = 'newMedButton';
-        // } else {
+      } else {
+        console.log('hello')
+        setTimeout(() => {
+          medButton.innerText = 'Press to start meditation';
+        }, 2000);
+      //   reload(true);
+        const audio = new Audio('audio.wav'); 
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = 0;
       }
     });
 
-  document.getElementById('newMedButton').addEventListener('click', () => {
-    console.log('HHHH');
-    setTimeout(() => {
-      medButton.innerText = 'Press to start meditation';
-    }, 2000);
-    reload(true);
-    audio.pause();
-    audio.currentTime = 0;
-    audio.volume = 0;
-  });
+  // document.getElementById('newMedButton').addEventListener('click', () => {
+  // });
 });
