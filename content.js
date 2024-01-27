@@ -9,9 +9,14 @@ function start() {
   animationContainer.id = 'animationContainer';
   body.appendChild(animationContainer);
 
-  const animationFunc = new Animation(animationContainer);
+  let animationFunc = new Animation(animationContainer);
   console.log(document.getElementById('animation').attributes);
 
   const breathButton = document.getElementById('breathButton');
   breathButton.addEventListener('click', animationFunc.boundAdjust);
+}
+
+function end () {
+  const body = document.querySelector('body');
+  body.innerHTML = '<button id="load-meditation-page">Press to start meditation</button><script src="main.js"></script>'
 }
