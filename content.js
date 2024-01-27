@@ -12,7 +12,6 @@ function start() {
   const animationFunc = new Animation(animationContainer);
   console.log(document.getElementById('animation').attributes);
 
-  const audio = new Audio('audio.wav');
-  audio.play();
-  audio.volume = 0.7;
+  const breathButton = document.getElementById('breathButton');
+  breathButton.addEventListener('click', animationFunc.adjust);
 }
