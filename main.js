@@ -2,31 +2,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const medButton = document.getElementById('load-meditation-page');
-
+  const audio = new Audio('audio.wav');
   document
     .getElementById('load-meditation-page')
     .addEventListener('click', () => {
-      const audio = new Audio('audio.wav');
       if (medButton.innerText === 'Press to start meditation') {
         start();
         setTimeout(() => {
           medButton.innerText = 'Press to finish meditation';
         }, 2000);
-        audio.play();
         audio.volume = 0.1;
+        audio.play();
         medButton.id = 'newMedButton';
       } else {
-        console.log('hello')
-        end ()
+        end();
         setTimeout(() => {
           medButton.innerText = 'Press to start meditation';
         }, 2000);
-      //   reload(true);
-        // const audio = new Audio('audio.wav'); 
         audio.pause();
         audio.currentTime = 0;
         audio.volume = 0;
-        console.log('got here!')
       }
     });
 
